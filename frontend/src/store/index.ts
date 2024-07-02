@@ -66,7 +66,7 @@ export const isConnectedToServer = computedAsync(async () => {
   /**
    * These can't be merged inside the if statement as they must be picked up by watchEffect, and the OR operation
    * stops evaluating in the first await tick as soon as the first truthy value is found.
-   * 
+   *
    * See https://vuejs.org/guide/essentials/watchers.html#watcheffect
    */
   const socket = remote.socket.isConnected.value;
